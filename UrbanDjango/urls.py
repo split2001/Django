@@ -16,7 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from task2.views import text2, Text1, welcome
+from django.views.generic import TemplateView
 
 urlpatterns = [
+    path('', welcome),
     path('admin/', admin.site.urls),
+    path('function/', text2),
+    path('class/', Text1.as_view())  # метод .as_view для запуска класса как функции
 ]
+#  path('class/', TemplateView.as_view(template_name = 'second_task/text1.html'))
