@@ -11,5 +11,7 @@ class Text1(TemplateView):
     template_name = 'second_task/text1.html'
 
 
-def welcome(request):
-    return render(request, 'second_task/welcome.html')
+
+
+
+
