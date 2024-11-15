@@ -1,0 +1,26 @@
+{% extends 'C:\Users\davla\PycharmProjects\Django\UrbanDjango\templates\fourth_task\menu.html'%}
+
+
+{% block title %}
+games
+{% endblock %}
+
+{% block header %}
+<h1> Игры </h1>
+{% endblock %}
+
+{% block navigation %}
+    {{block.super}}
+{% endblock  %}
+
+
+{% block content %}
+    {% for game in games %}
+    <h3>{{game}} <button>Купить</button> </h3>
+    {% endfor %}
+    <a href="/">
+    <button>Вернуться обратно</button>
+    </a>
+{% endblock %}
+
+
