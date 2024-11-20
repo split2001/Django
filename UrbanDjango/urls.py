@@ -19,14 +19,17 @@ from django.urls import path
 from task2.views import text2, Text1
 from django.views.generic import TemplateView
 from task4.views import menu, game, cart, platform
+from task5.views import sign_up_by_html, sign_up_by_django
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('function/', text2),
     path('class/', Text1.as_view()),  # метод .as_view для запуска класса как функции
-    path('', platform),
+    path('ttt', platform),
     path('games/', game),
     path('cart/', cart),
-    path('platform/', platform)
+    path('platform/', platform),
+    path('', sign_up_by_html),
+    path('django_sign_up/', sign_up_by_django)
 ]
 #  path('class/', TemplateView.as_view(template_name = 'second_task/text1.html'))
